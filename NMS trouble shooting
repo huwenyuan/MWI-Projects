@@ -1,0 +1,49 @@
+1. Log for Switchover
+---------------------
+1) Basestation Ready:
+   "$$$$$ BS READY:"
+   "Basestation Zc046TAD:zone1 failure status changed to false"
+
+2) Switchover finished:
+   "Switchover process status changed from 4 to 0"
+
+3) AB Switch scheme finish
+   "AB Switch scheme return SUCCESS"
+   "Switchover process status changed from 3 to 4"
+
+4) Receive Switchover Request from Peer
+   "Received Switchover request: Basestation Failure from Peer Server"
+   "Switchover process status changed from 0 to 3"
+   "Switchover process (Basestation Failure) started"
+   
+5) Basestation failure
+   "Basestation Zc046TAD:zone1 failure status changed to true"
+
+6) Auto Switchover triggered
+   "Basestation Zc003TAW:zone1 failure , Auto Switchover will be triggered"
+   "Switchover process status changed from 0 to 1"
+
+7) Basestation failure reaches threshold
+   "Basestation failure threshold is reached: 5"
+
+8) Control Center activated
+   "Publish Control Center Activated event: 1"
+   "Current server is the active server"
+   "Control Center changed"
+   
+2. Trap
+1) Receiving trap
+   "Received Trap [null]: ID=xxxxx, fromatLine=...."
+
+2) Equipment status changed on trap
+   "Equipment xxxxxx status changed to 3"      -- 3 is Major Alarm
+   
+3. Database Update
+1) Receive data change request
+   "Received request: ChangeDataList"
+   
+4. Client Login
+1) Retrive latest alarms
+   "******* TOTAL alarm: 3558, returned: 1000"
+   
+   
